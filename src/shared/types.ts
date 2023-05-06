@@ -5,14 +5,19 @@ export enum SelectedPage {
   ContactUs = "contactus",
 }
 
-export interface BenefitType {
+export type NavbarProps = {
+  selectedPage: SelectedPage;
+  setSelectedPage: (value: SelectedPage) => void;
+};
+
+export type BenefitItem = {
   icon: JSX.Element;
   title: string;
   description: string;
-}
+};
 
 export interface ClassType {
-  name: string;
   description?: string;
+  name: string;
   image: string;
 }
